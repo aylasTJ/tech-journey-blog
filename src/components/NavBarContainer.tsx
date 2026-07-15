@@ -2,7 +2,6 @@ import React from 'react';
 import Link from "next/link";
 import type {UrlObject} from "url";
 import Image from "next/image";
-import profilePic from '../../public/images/avatar.jpg'
 import DarkModeButton from "@/components/DarkModeButton";
 
 interface NavBarContainerProps {
@@ -31,13 +30,7 @@ const NavBarContainer: React.FC<NavBarContainerProps> = ({title, children, links
         <input id="nav-drawer" type="checkbox" className="drawer-toggle"/>
         <div className="drawer-content flex flex-col items-center pt-[4.25rem]">
           <div className="w-full navbar glass fixed top-0 z-10 h-18">
-            <div className="flex-none hidden lg:block w-12 h-12">
-              <div className="avatar">
-                <div className="w-12 rounded-full border-primary border-2">
-                  <Image alt={'Profile image'} src={profilePic}/>
-                </div>
-              </div>
-            </div>
+            <div className="flex-none hidden lg:block w-12 h-12"> </div>
             <div className="flex-none lg:hidden w-12 h-12">
               <label htmlFor="nav-drawer" className="btn btn-square btn-ghost">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
