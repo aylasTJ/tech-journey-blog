@@ -1,6 +1,6 @@
 import './globals.css'
 import type {Metadata} from 'next'
-import {Inter} from 'next/font/google'
+import {Noto_Sans_JP} from 'next/font/google'
 import NavBarContainer from "@/components/NavBarContainer";
 import Footer from "@/components/Footer";
 
@@ -11,7 +11,10 @@ TODO:  Change these things along with:
  */
 const title = 'Ayla\'s Site';
 const description = 'This my personal site';
-const font = Inter({weight: 'variable', subsets: ['latin']})
+const font = Noto_Sans_JP({
+  subsets: ['latin', 'japanese'],
+  weight: ['400', '700'],
+})
 const links = [
   {title: 'Pokemon', href: '/pokemon'},
   {title: 'Rick and Morty', href: '/rick-and-morty'}
