@@ -12,8 +12,9 @@ TODO:  Change these things along with:
 const title = 'Ayla\'s Site';
 const description = 'This my personal site';
 const font = Noto_Sans_JP({
-  subsets: ['latin', 'japanese'],
+  subsets: ['latin'],
   weight: ['400', '700'],
+  display: 'swap',
 })
 const links = [
   {title: 'Pokemon', href: '/pokemon'},
