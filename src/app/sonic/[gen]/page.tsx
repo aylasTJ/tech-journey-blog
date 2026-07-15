@@ -1,19 +1,23 @@
 import {fetchZones, fetchCharactersByZone} from "@/lib/sonic";
-import invariant from "tiny-invariant";
+import {notFound} from 'next/navigation';
 import SonicCharacter from "@/components/SonicCharacter";
 
 type Props = {
-  params: Promise<{
-    zone: string
-  }>
+  params: {
+    gen: string
+  }
 }
 
 export default async function SonicZonePage(props: Props) {
-  const zoneId = Number((await props.params).zone);
-  const zones = await fetchZones()
+  const zoneId = Number(props.params.gen);
+  const zones = await fetchZones();
   const validZoneIds = zones.zones.map(x => x.id);
-  invariant(validZoneIds.includes(zoneId), `Zone ${zoneId} is invalid`)
-  const characters = await fetchCharactersByZone(zoneId)
+
+  if (!validZoneIds.includes(zoneId)) {
+    return notFound();
+  }
+
+  const characters = await fetchCharactersByZone(zoneId);
 
   return (
       <div>
