@@ -10,14 +10,25 @@ interface SonicTabsProps {
 }
 
 const SonicTabs: React.FC<SonicTabsProps> = ({zones}) => {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
-      <div className="tabs tabs-lift tabs-lg">
+      <div className="flex flex-wrap justify-center gap-3 px-4">
         {zones.map(zone => {
           const href = `/sonic/${zone.id}`;
+          const isActive = href === pathname;
           return (
-              <Link key={zone.id} className={clsx('tab', {'tab-active': href === pathname})} href={href}>
+              <Link
+                  key={zone.id}
+                  href={href}
+                  className={clsx(
+                      'btn btn-sm rounded-full px-5 transition',
+                      {
+                        'btn-primary text-white': isActive,
+                        'btn-ghost text-slate-200 hover:bg-slate-800': !isActive,
+                      }
+                  )}
+              >
                 {zone.name}
               </Link>
           )
