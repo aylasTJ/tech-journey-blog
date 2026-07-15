@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 /*
 TODO:  Change these things along with:
-  - avatar.jpeg in /public/images
+  - avatar.jpg in /public/images
   - favicon.ico in /public
  */
 const font = Karla({ weight: '400', subsets: ['latin']})
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   title,
   description,
   icons: {
-    icon: '/favicon.ico',
+    icon: '/tails.png',
   },
 }
 
