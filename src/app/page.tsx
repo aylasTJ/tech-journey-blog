@@ -37,8 +37,8 @@ export default function Home() {
         </section>
 
         <div className={'my-4'}>
-          <Image className={'rounded'} src={imageUrl} alt={'My Image'} width={500}
-                 height={500}/>
+          <Image className={'rounded'} src={imageUrl} alt={'My Image'} width={800}
+                 height={800}/>
         </div>
 
         <section className={'prose'}>
