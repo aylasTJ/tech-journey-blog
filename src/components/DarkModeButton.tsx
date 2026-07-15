@@ -19,10 +19,10 @@ const DarkModeButton: React.FC<DarkModeButtonProps> = () => {
 
   return (
       <div className="m-5 flex items-center">
-        🌑
-        <input data-toggle-theme="light,dark" type="checkbox" className="toggle mx-1"
-               defaultChecked={currentTheme === 'dark'}/>
         💡
+        <input data-toggle-theme="fantasy,dark" type="checkbox" className="toggle mx-1"
+               defaultChecked={currentTheme === 'dark'}/>
+        🌑
       </div>
   );
 };

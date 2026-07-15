@@ -17,7 +17,7 @@ const font = Noto_Sans_JP({
   display: 'swap',
 })
 const links = [
-  {title: 'Pokemon', href: '/pokemon'},
+  {title: 'Sonic', href: '/sonic'},
   {title: 'Rick and Morty', href: '/rick-and-morty'}
 ];
 const SocialLinks = {
