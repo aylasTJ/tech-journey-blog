@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   title,
   description,
   icons: {
-    icon: '/tails.png',
+    icon: '/favicon.ico',
   },
 }
 
