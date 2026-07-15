@@ -1,7 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     daisyui: {
-        themes: ["fantasy", "dark"],
+        themes: ["light", 
+            "dark",
+            {
+                "fantasy":{
+                    "primary": "#f5f1e8",
+                    "base-100": "#101114",
+                    "accent": "#2563e6",
+                    "neutral": "#c7c9c7",
+                    "secondary": "#2fb344",
+                },
+            },
+
+        ],
     },
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',

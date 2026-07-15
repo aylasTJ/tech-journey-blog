@@ -1,6 +1,6 @@
 import './globals.css'
 import type {Metadata} from 'next'
-import {Karla} from 'next/font/google';
+import {Inter} from 'next/font/google'
 import NavBarContainer from "@/components/NavBarContainer";
 import Footer from "@/components/Footer";
 
@@ -9,9 +9,9 @@ TODO:  Change these things along with:
   - avatar.jpg in /public/images
   - favicon.ico in /public
  */
-const font = Karla({ weight: '400', subsets: ['latin']})
 const title = 'Ayla\'s Site';
 const description = 'This my personal site';
+const font = Inter({weight: 'variable', subsets: ['latin']})
 const links = [
   {title: 'Pokemon', href: '/pokemon'},
   {title: 'Rick and Morty', href: '/rick-and-morty'}
